@@ -68,6 +68,11 @@ pygame.display.flip()
 while running:
     pygame.time.delay(int(1000/FPS))
 
+    for e in pygame.event.get():
+    	if e.type == pygame.QUIT:
+    		pygame.quit()
+    		exit()
+
     if (sec%3 == 0):
         co = []
         co.append(random.randint(1, width-1))
